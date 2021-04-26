@@ -1,0 +1,54 @@
+@import '../../styles/variables';
+
+$bg-color: transparentize($color: $theme, $amount: 0.15);
+
+nav.chapter-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+
+    transition: .2s ease-in-out;
+    will-change: transform;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 1.2rem;
+    color: $light;
+    background: $bg-color;
+
+    // border-bottom-left-radius: 20px;
+    // border-bottom-right-radius: 20px;
+
+    a {
+        transform-origin: 50% 60%;
+        transform: scale(1.5, 2);
+    }
+
+    .chapter-details {
+        margin: 1rem 0;
+        h1, h2 {
+            margin: 0;
+        }
+
+        h2.chapter-num {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+footer.chapter-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    padding: 0 1rem;
+
+    transition: .2s ease-in-out;
+    will-change: transform;
+
+    font-size: 0.7rem;
+    color: $light;
+    background: $bg-color;
+}

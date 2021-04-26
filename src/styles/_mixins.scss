@@ -1,0 +1,4 @@
+@mixin cardify ($color) {
+    background: transparentize($color, 0.9);
+    border: 3px solid $color;
+}

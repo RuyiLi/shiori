@@ -1,0 +1,17 @@
+@import '../../styles/variables';
+
+$box-shadow: 0 0 6px black;
+
+.page-counter {
+    position: fixed;
+    right: 40px;
+    top: 50vh;
+    transform: translateY(-50%);
+    
+    padding: 0 1.5rem;
+    box-shadow: $box-shadow;
+    border-radius: $radius;
+    text-align: center;
+
+    font-size: 1rem;
+}

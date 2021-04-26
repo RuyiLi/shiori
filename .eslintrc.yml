@@ -1,0 +1,44 @@
+---
+root: true
+
+parser: '@typescript-eslint/parser'
+
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+
+env:
+  node: true
+
+plugins:
+  - '@typescript-eslint'
+  - 'react'
+
+extends:
+  - airbnb-base
+
+rules:
+  class-methods-use-this: off
+  no-plusplus: off
+  no-console: off
+  no-tabs: off
+  no-unused-vars: warn
+
+  import/extensions: off
+  import/prefer-default-export: off
+
+  space-before-function-paren:
+    - error
+    - always
+  indent:
+    - error
+    - 4
+  prefer-arrow-callback:
+    - warn
+    - allowNamedFunctions: true
+  array-bracket-spacing:
+    - error
+    - always
+  quotes:
+    - error
+    - single

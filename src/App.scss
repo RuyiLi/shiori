@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import './styles/variables';
+
+a {
+    text-decoration: none;
+    color: inherit;
+    margin: 0 1.5rem;
+    cursor: pointer;
+    
+    &.button {
+        border: 1px solid $light;
+    }
+}
+
+.error {
+    color: $error;
+}
+
+* {
+    font-family: 'Patrick Hand', sans-serif;
+    font-weight: 300;
+}
+
+body {
+    background: $dark;
+    color: $light;
+    padding: 2rem;
+    font-size: 1.5rem;
+}

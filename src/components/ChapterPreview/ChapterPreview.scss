@@ -1,0 +1,49 @@
+@import '../../styles/variables';
+
+.chapter-card {
+    $width: 150px;
+
+    display: inline-block;
+    position: relative;
+    width: $width;
+    height: $width / 8 * 11.5;
+    background-size: contain;
+
+    .chapter-card--link {
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        margin: 0;
+    }
+
+    .chapter-card--cover {
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background: transparentize($dark, 0.2);
+        
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        h1 {
+            font-size: 1.3rem;
+        }
+    }
+
+    .delete {        
+        $spacing: 4px;
+        $v-scale: 0.7;
+
+        position: absolute;
+        top: $spacing / $v-scale;
+        right: $spacing;
+        background: transparentize($error, 0.5);
+        border-radius: 3px;
+        padding: $spacing;
+        font-size: 13px;
+        transform-origin: top;
+        transform: scaleY($v-scale);
+        cursor: crosshair;
+    }
+}

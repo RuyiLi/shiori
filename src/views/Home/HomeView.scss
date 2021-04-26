@@ -1,0 +1,107 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.saved-chapters {
+    @include cardify($theme);
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin: 2rem;
+    padding: 0 3rem 3.5rem;
+
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+        flex-basis: 100%;
+    }
+}
+
+.chapter-card {
+    margin-bottom: calc(1.5rem + 4px);
+}
+
+.manga-preview {
+    @include cardify($error);
+
+    justify-content: space-between;
+    padding: 0 1.5rem 1rem;
+    margin-right: 3rem;
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .chapter-card {
+        margin-bottom: 0;
+        &:not(:nth-child(2)) {
+            margin-left: 1.5rem;
+        }
+    }
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+
+    padding: 0 1rem;
+
+    h1 {
+        border-right: 2px solid $light;
+        transition: .2s ease-in-out;
+        user-select: none;
+
+        &:hover::after {
+            clip-path: inset(0);
+            width: 12.5rem;
+            margin-right: 2rem;
+        }
+
+        &::after {
+            content: 'imgbb.co proxy for reading manga.';
+            display: inline-block;
+            font-size: 1rem;
+            margin-left: 2rem;
+            clip-path: inset(0 100% 0 0);
+            transition: inherit;
+            width: 0;
+            white-space: nowrap;
+        }
+    }
+    
+    input[type='text'] {
+        font-size: inherit;
+        color: inherit;
+
+        border: none;
+        outline: none;
+        background: transparent;
+        border-bottom: 4px solid $light;
+
+        transition: .1s ease-in-out;
+        margin-left: 2rem;
+        margin-right: 1rem;
+        min-width: 320px;
+
+        &:hover, &:focus {
+            border-bottom-color: $theme;
+        }
+    }
+
+    a {
+        border-bottom: 0;
+        transition: .1s ease-in-out;
+        user-select: none;
+
+        &:hover {
+            transform: translateY(-3px);
+        }
+        &:active, &:focus {
+            transform: translateY(2px);
+        }
+    }
+
+    p.error {
+        margin-left: 1rem;
+    }
+}
